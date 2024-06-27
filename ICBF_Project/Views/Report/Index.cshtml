@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="text-center">
+    <h1 class="display-4"> Reporte</h1>
+    <a class="btn btn-primary" asp-asp-controller="Report" asp-action="MostrarPDFenPagina" target="_blank">Ver PDF en Pagina</a>
+    <a class="btn btn-primary" asp-asp-controller="Report" asp-action="DescargarPDF" target="_blank">Descargar PDF</a>
+    <br/>
+    <br/>
+
+    <embed src="@Url.Action("MostrarPDFenPagina", "Report")" width="800"height="400" type="application/pdf"/>
+</div>

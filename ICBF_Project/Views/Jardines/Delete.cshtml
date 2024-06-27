@@ -1,0 +1,23 @@
+﻿@model ICBF_Project.Models.Jardine
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h4>Jardine</h4>
+<hr />
+<div>
+    <h4>Are you sure you want to delete this?</h4>
+    <div>
+        <h4>Nombre: @Model.Nombre</h4>
+        <h4>Direccion: @Model.Direccion</h4>
+        <h4>Estado: @Model.Estado</h4>
+    </div>
+    <form asp-action="DeleteConfirmed">
+        <input type="hidden" asp-for="PkIdJardin" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

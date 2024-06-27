@@ -1,0 +1,105 @@
+﻿@model ICBF_Project.Models.ViewModels.AvanceAcademicoVM
+@{
+    @if (Model.oAvanceAcademico.FkNuip == 0)
+    {
+        ViewData["Title"] = "Crear AavenceAcademico";
+    }
+    else
+    {
+        ViewData["Title"] = "Editar AavenceAcademico";
+    }
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.oAvanceAcademico.PkIdAvanceAcademico == 0)
+{
+    <h1>Crear Avance Académico</h1>
+}
+else
+{
+    <h1>Editar Avance Académico</h1>
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="AvanceAcademico_Detalle" asp-controller="AvanceAcademico" method="post">
+            <input type="hidden" asp-for="oAvanceAcademico.PkIdAvanceAcademico" />
+
+            @if(Model.oAvanceAcademico.FkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAvanceAcademico.FkNuip">NUIP Niño</label>
+                    <select class="form-select form-select-sm" asp-for="oAvanceAcademico.FkNuip" asp-items="@Model.oListaNino">
+                        <option selected disabled>--Seleccionar--</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="oAvanceAcademico.FkNuip"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAvanceAcademico.FkNuip">NUIP Niño</label>
+                    <input class="form-control form-control-sm" asp-for="oAvanceAcademico.FkNuip" type="text" readonly />
+                    <span class="text-danger" asp-validation-for="oAvanceAcademico.FkNuip"></span>
+                </div>
+            }
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAvanceAcademico.Nivel">Nivel</label>
+                <select class="form-select form-select-sm" asp-for="oAvanceAcademico.Nivel">
+                    <option selected disabled>--Seleccionar--</option>
+                    <option value="Natal">Natal</option>
+                    <option value="PreNatal">PreNatal</option>
+                    <option value="Parvulo">Párvulo</option>
+                    <option value="Jardin">Jardin</option>
+                    <option value="PreJardin">Pre-Jardin</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oAvanceAcademico.Nivel"></span>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" asp-for="oAvanceAcademico.Notas">Notas</label>
+                <select class="form-select form-select-sm" asp-for="oAvanceAcademico.Notas">
+                    <option selected disabled>--Seleccionar--</option>
+                    <option value="S">S=Superior</option>
+                    <option value="A">A=Alto</option>
+                    <option value="B">B=Bajo</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oAvanceAcademico.Notas"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAvanceAcademico.Descripcion">Descripcion</label>
+                <input class="form-control form-control-sm" asp-for="oAvanceAcademico.Descripcion" type="text" />
+                <span class="text-danger" asp-validation-for="oAvanceAcademico.Descripcion"></span>
+            </div>
+            @if(Model.oAvanceAcademico.FkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAvanceAcademico.FechaEntrega">Fecha Entrega</label>
+                    <input class="form-control form-control-sm" asp-for="oAvanceAcademico.FechaEntrega" type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <span class="text-danger" asp-validation-for="oAvanceAcademico.FechaEntrega"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAvanceAcademico.FechaEntrega">Fecha Entrega</label>
+                    <input class="form-control form-control-sm" asp-for="oAvanceAcademico.FechaEntrega" type="date" />
+                    <span class="text-danger" asp-validation-for="oAvanceAcademico.FechaEntrega"></span>
+                </div>
+            }
+            <div class="mb-2">
+                @if (Model.oAvanceAcademico.PkIdAvanceAcademico == 0)
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Crear</button>
+                }
+                else
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Actualizar</button>
+                }
+                <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="AvanceAcademico">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

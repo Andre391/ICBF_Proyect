@@ -1,0 +1,62 @@
+﻿@model List<ICBF_Project.Models.Nino>
+@{
+    ViewData["Title"] = "Niños";
+}
+
+<div class="text-center">
+    <div class="alert alert-success">
+        <h2 class="display-4">CRUD NIÑOS</h2>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Jardines</h5>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success btn-sm" asp-action="Nino_Detalle" asp-controller="Ninos" asp-route-pkNuip="0"> Crear Nuevo</a>
+        <hr />
+        <table class="table table-striped">
+    <thead>
+        <tr>
+            <th>NUIP</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Fecha Nacimiento</th>
+            <th>Tipo Sangre</th>
+            <th>Departamento</th>
+            <th>Ciudad</th>
+            <th>Teléfono</th>
+            <th>Dirección</th>
+            <th>EPS</th>
+            <th>Jardín</th>
+            <th>Acudiente</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.PkNuip</td>
+                <td>@item.Nombre</td>
+                <td>@item.Apellido</td>
+                <td>@item.FechaNacimiento</td>
+                <td>@item.TipoSangre</td>
+                <td>@item.Departamento</td>
+                <td>@item.Ciudad</td>
+                <td>@item.Telefono</td>
+                <td>@item.Direccion</td>
+                <td>@item.Eps</td>
+                <td>@item.oJardin.Nombre</td>
+                <td>@item.oUsuario.Cedula</td>
+                <td>
+                    <a class="btn btn-primary btn-sm" asp-action="Nino_Detalle" asp-route-pkNuip="@item.PkNuip">Editar</a>
+                    <a class="btn btn-danger btn-sm" asp-action="Eliminar" asp-route-pkNuip="@item.PkNuip">Eliminar</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@using Microsoft.AspNetCore.Identity;
+@model List<ICBF_Project.Models.AvanceAcademico>
+
+@{
+    ViewData["Title"] = "Avance Academico";
+}
+
+<div class="text-center">
+    <div class="alert alert-success">
+        <h2 class="display-4">CRUD AvanceAcademico</h2>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>AvanceAcademico</h5>
+    </div>
+    <div class="card-body">
+        @if (User.IsInRole("Administrador"))
+        {
+            <a class="btn btn-success btn-sm" asp-action="AvanceAcademico_Detalle" asp-controller="AvanceAcademico" asp-route-PkIdAsistencia="0">Crear Nuevo</a>
+            <hr />
+        }
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>NUIP Niño</th>
+                    <th>Nivel</th>
+                    <th>Notas</th>
+                    <th>Descripcion</th>
+                    <th>Fecha Entrega</th>
+                    @if (User.IsInRole("Administrador"))
+                    {
+                        <th>Acciones</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.oNino.PkNuip</td>
+                        <td>@item.Nivel</td>
+                        <td>@item.Notas</td>
+                        <td>@item.Descripcion</td>
+                        <td>@item.FechaEntrega</td>
+                        <td>
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <a class="btn btn-primary" asp-action="AvanceAcademico_Detalle" asp-controller="AvanceAcademico" asp-route-PkIdAvanceAcademico="@item.PkIdAvanceAcademico">Editar</a>
+                            }
+                            @if (User.IsInRole("Administrador"))
+                            {
+                                <a class="btn btn-danger" asp-action="Eliminar" asp-controller="AvanceAcademico" asp-route-PkIdAvanceAcademico="@item.PkIdAvanceAcademico">Eliminar</a>
+                            }
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

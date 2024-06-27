@@ -1,0 +1,33 @@
+﻿@model ICBF_Project.Models.Asistencia
+@{
+    ViewData["Title"] = "Eliminar Asistencia";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-danger">¿Está seguro de eliminar esta Asistencia?</h3>
+<hr />
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Eliminar" asp-controller="Asistencia" method="post">
+            <input type="hidden" asp-for="PkIdAsistencia" />
+
+            <div class="mb-2">
+        <label class="form-label" asp-for="FkNuip">NUIP Niño</label>
+        <input class="form-control form-control-sm" asp-for="oNino.PkNuip" type="text" disabled />
+            </div>
+            <div class="mb-2">
+        <label class="form-label" asp-for="Fecha">Fecha</label>
+        <input class="form-control form-control-sm" asp-for="Fecha" type="date" disabled />
+            </div>
+            <div class="mb-2">
+        <label class="form-label" asp-for="EstadoNino">Estado Nino</label>
+        <input class="form-control form-control-sm" asp-for="EstadoNino" type="text" disabled />
+            </div>
+            <div class="mb-2">
+        <button class="btn btn-danger btn-sm w-25" type="submit">Eliminar</button>
+        <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="Asistencia">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+

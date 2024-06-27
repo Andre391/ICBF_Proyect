@@ -1,0 +1,42 @@
+﻿@model Usuario
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ICBF</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.png">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/Acceso.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="row mt-5">
+        <div class="form-container col-sm-4 offset-sm-4 ">
+            <form asp-controller="Acceso" asp-action="Index" method="post">
+                <div class="mb-3 text-center">
+                    <img class="img-small" src="~/Resources/ICBF_Logo.png" alt="Logo">
+                </div>
+                <div class="mb-3 text-center">
+                    <h2>Bienvenido a los jardines del ICBF</h2>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email</label>
+                    <input type="email" class="form-control" asp-for="Email">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label" >Contraseña</label>
+                    <input type="password" class="form-control" asp-for="Contrasena">
+                </div>
+                <div class="mb-3 text-center">
+                <button type="submit" class="btn btn-primary ">Ingresar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

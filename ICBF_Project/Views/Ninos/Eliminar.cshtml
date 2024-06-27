@@ -1,0 +1,69 @@
+﻿@model ICBF_Project.Models.Nino
+@{
+    ViewData["Title"] = "Eliminar Niño";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-danger">¿Está seguro de eliminar al Niño?</h3>
+<hr />
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="EliminarConfirmed" method="post">
+            <input type="hidden" asp-for="PkNuip" />
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="PkNuip">NUIP</label>
+                <input class="form-control form-control-sm" asp-for="PkNuip" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Nombre">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="Nombre" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Apellido">Apellido</label>
+                <input class="form-control form-control-sm" asp-for="Apellido" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="FechaNacimiento">Fecha de Nacimiento</label>
+                <input class="form-control form-control-sm" asp-for="FechaNacimiento" type="date" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="TipoSangre">Tipo de Sangre</label>
+                <input class="form-control form-control-sm" asp-for="TipoSangre" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Departamento">Departamento</label>
+                <input class="form-control form-control-sm" asp-for="Departamento" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Ciudad">Ciudad</label>
+                <input class="form-control form-control-sm" asp-for="Ciudad" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="FkIdUsuario">Id Acudiente</label>
+                <input class="form-control form-control-sm" asp-for="oUsuario.Cedula" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Telefono">Telefono</label>
+                <input class="form-control form-control-sm" asp-for="Telefono" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Direccion">Direccion</label>
+                <input class="form-control form-control-sm" asp-for="Direccion" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="Eps">EPS</label>
+                <input class="form-control form-control-sm" asp-for="Eps" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="FkIdJardin">Jardin</label>
+                <input class="form-control form-control-sm" asp-for="oJardin.Nombre" type="text" disabled />
+            </div>
+            <div class="mb-2">
+                <button class="btn btn-danger btn-sm w-10" type="submit">Eliminar</button>
+                <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="Ninos">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

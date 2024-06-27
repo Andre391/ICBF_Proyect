@@ -1,0 +1,42 @@
+﻿@model List<ICBF_Project.Models.Role>
+
+@{
+    ViewData["Title"] = "Roles";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <div class="alert alert-success">
+        <h2 class="display-4">CRUD Roles</h2>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Roles</h5>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success btn-sm" asp-action="Rol_Detalle" asp-controller="Roles" asp-route-pkIdRol="0">Crear Nuevo</a>
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre Rol</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.NombreRol</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Rol_Detalle" asp-controller="Roles" asp-route-pkIdRol="@item.PkIdRol">Editar</a>
+                            <a class="btn btn-danger" asp-action="Eliminar" asp-controller="Roles" asp-route-pkIdRol="@item.PkIdRol">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

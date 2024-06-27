@@ -1,0 +1,167 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ICBF_Project
+build_property.RootNamespace = ICBF_Project
+build_property.ProjectDir = C:\Users\yulli\OneDrive\Documentos\.NET\ICBF_Project\ICBF_Project\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\yulli\OneDrive\Documentos\.NET\ICBF_Project\ICBF_Project
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Acceso/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjZXNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Asistencia/Asistencia_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RlbmNpYVxBc2lzdGVuY2lhX0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Asistencia/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RlbmNpYVxFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Asistencia/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNpc3RlbmNpYVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/AvanceAcademico/AvanceAcademico_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhbmNlQWNhZGVtaWNvXEF2YW5jZUFjYWRlbWljb19EZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/AvanceAcademico/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhbmNlQWNhZGVtaWNvXEVsaW1pbmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/AvanceAcademico/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZhbmNlQWNhZGVtaWNvXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Jardin_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcSmFyZGluX0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Jardines/Report.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSmFyZGluZXNcUmVwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Ninos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmlub3NcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Ninos/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmlub3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Ninos/Nino_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTmlub3NcTmlub19EZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Report/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Report/MostrarPDFenPagina.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XE1vc3RyYXJQREZlblBhZ2luYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Report/PDFInasistencia.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFBERkluYXNpc3RlbmNpYS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Report/VistaParaPDF.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwb3J0XFZpc3RhUGFyYVBERi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Roles/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Roles/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Roles/Rol_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9sZXNcUm9sX0RldGFsbGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Usuarios/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Usuarios/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Usuarios/Usuario_Detalle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXN1YXJpb3NcVXN1YXJpb19EZXRhbGxlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/yulli/OneDrive/Documentos/.NET/ICBF_Project/ICBF_Project/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-89lr538mq7

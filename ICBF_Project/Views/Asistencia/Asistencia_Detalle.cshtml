@@ -1,0 +1,92 @@
+﻿@model ICBF_Project.Models.ViewModels.AsistenciaVM
+@{
+    @if (Model.oAsistencia.FkNuip == 0)
+    {
+        ViewData["Title"] = "Crear Asistencias";
+    }
+    else
+    {
+        ViewData["Title"] = "Editar Asistencias";
+    }
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.oAsistencia.PkIdAsistencia == 0)
+{
+    <h1>Crear Asistencia</h1>
+}
+else
+{
+    <h1>Editar Asistencia</h1>
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Asistencia_Detalle" asp-controller="Asistencia" method="post">
+            <input type="hidden" asp-for="oAsistencia.PkIdAsistencia" />
+
+            @if (Model.oAsistencia.FkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAsistencia.FkNuip">NUIP Niño</label>
+                    <select class="form-select form-select-sm" asp-for="oAsistencia.FkNuip" asp-items="@Model.oListaNino">
+                        <option selected disabled>--Seleccionar--</option>
+                    </select>
+                    <span class="text-danger" asp-validation-for="oAsistencia.FkNuip"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAsistencia.FkNuip">NUIP Niño</label>
+                    <input class="form-control form-control-sm" asp-for="oAsistencia.FkNuip" type="text" readonly />
+                </div>
+            }
+            @if (Model.oAsistencia.FkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAsistencia.Fecha">Fecha</label>
+                    <input class="form-control form-control-sm" asp-for="oAsistencia.Fecha" type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <span class="text-danger" asp-validation-for="oAsistencia.Fecha"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oAsistencia.Fecha">Fecha</label>
+                    <input class="form-control form-control-sm" asp-for="oAsistencia.Fecha" type="date" />
+                    <span class="text-danger" asp-validation-for="oAsistencia.Fecha"></span>
+                </div>
+            }
+            <div class="mb-2">
+                <label class="form-label" asp-for="oAsistencia.EstadoNino">Estado Niño</label>
+                <select class="form-select form-select-sm" asp-for="oAsistencia.EstadoNino">
+                    <option selected disabled>--Seleccionar--</option>
+                    <option value="Enfermo">Enfermo</option>
+                    <option value="Sano">Sano</option>
+                    <option value="Decaido">Decaido</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oAsistencia.EstadoNino"></span>
+            </div>
+            <div class="mb-2">
+                @if (Model.oAsistencia.PkIdAsistencia == 0)
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Crear</button>
+                }
+                else
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Actualizar</button>
+                }
+                <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="Asistencia">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
+

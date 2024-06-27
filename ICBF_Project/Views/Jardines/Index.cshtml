@@ -1,0 +1,59 @@
+﻿@model List<ICBF_Project.Models.Jardine>
+
+@{
+    ViewData["Title"] = "Jardines";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="text-center">
+    <div class="alert alert-success">
+        <h2 class="display-4">CRUD JARDINES</h2>
+    </div>
+</div>
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Jardines</h5>
+    </div>
+    <div class="card-body">
+        <a class="btn btn-success btn-sm"  asp-action="Jardin_Detalle" asp-controller="Jardines" asp-route-pkIdJardin="0">Crear Nuevo</a>
+        <span class="mx-2">|</span>
+        <a class="btn btn-primary btn-sm" asp-controller="Report" asp-action="MostrarPDFenPagina" asp-route-reporte="Jardines" target="_blank">Ver PDF en Página</a>
+        <a class="btn btn-primary btn-sm" asp-controller="Report" asp-action="DescargarPDF" asp-route-reporte="Jardines" target="_blank">Descargar PDF</a>
+
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre Jardin</th>
+                    <th>Direccion</th>
+                    <th>Estado</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Estado</td>
+                        <td>
+                            <a class="btn btn-primary" asp-action="Jardin_Detalle" asp-controller="Jardines" asp-route-pkIdJardin="@item.PkIdJardin">Editar</a>
+                            <a class="btn btn-danger" asp-action="Eliminar" asp-controller="Jardines" asp-route-pkIdJardin="@item.PkIdJardin">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

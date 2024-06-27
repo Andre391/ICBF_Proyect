@@ -1,0 +1,38 @@
+﻿@model List<ICBF_Project.Models.Jardine>
+
+@{
+    ViewData["Title"] = "Reporte de Jardines No Aprobados";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="text-center">
+    <h2>Reporte de Jardines No Aprobados</h2>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Lista de Jardines No Aprobados</h5>
+    </div>
+    <div class="card-body">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre Jardin</th>
+                    <th>Direccion</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.Nombre</td>
+                        <td>@item.Direccion</td>
+                        <td>@item.Estado</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

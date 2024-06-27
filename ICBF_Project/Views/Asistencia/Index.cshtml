@@ -1,0 +1,61 @@
+﻿@model List<ICBF_Project.Models.Asistencia>
+
+@{
+    ViewData["Title"] = "Asistencia";
+    var currentHour = DateTime.Now.Hour;
+    var isRestrictedTime = currentHour < 8 || currentHour >= 10;
+}
+
+<div class="text-center">
+    <div class="alert alert-success">
+        <h2 class="display-4">CRUD Asistencia</h2>
+    </div>
+</div>
+
+<div class="card">
+    <div class="card-header">
+        <h5>Asistencia</h5>
+    </div>
+    <div class="card-body">
+        @if (!isRestrictedTime)
+        {
+        <a class="btn btn-success btn-sm" asp-action="Asistencia_Detalle" asp-controller="Asistencia" asp-route-PkIdAsistencia="0">Crear Nuevo</a>
+            <span class="mx-2">|</span>
+        }
+        <a class="btn btn-primary btn-sm" asp-controller="Report" asp-action="MostrarPDFenPagina" asp-route-reporte="Inasistencias" target="_blank">Ver PDF en Página</a>
+        <a class="btn btn-primary btn-sm" asp-controller="Report" asp-action="DescargarPDF" asp-route-reporte="Inasistencias" target="_blank">Descargar PDF</a>
+        <hr />
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>NUIP Niño</th>
+                    <th>Fecha</th>
+                    <th>Estado Niño</th>
+                    @if (!isRestrictedTime)
+                    {    
+                    <th>Acciones</th>
+                    }
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.oNino.PkNuip</td>
+                        <td>@item.Fecha</td>
+                        <td>@item.EstadoNino</td>
+                        <td>
+                            @if (!isRestrictedTime)
+                            {
+                            <a class="btn btn-primary" asp-action="Asistencia_Detalle" asp-controller="Asistencia" asp-route-PkIdAsistencia="@item.PkIdAsistencia">Editar</a>
+                            <a class="btn btn-danger" asp-action="Eliminar" asp-controller="Asistencia" asp-route-PkIdAsistencia="@item.PkIdAsistencia">Eliminar</a>
+                            }
+
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

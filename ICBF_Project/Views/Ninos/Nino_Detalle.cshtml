@@ -1,0 +1,184 @@
+﻿@model ICBF_Project.Models.ViewModels.NinoVM
+@{
+    @if (Model.oNino.PkNuip == 0)
+    {
+        ViewData["Title"] = "Crear Niño";
+    }
+    else
+    {
+        ViewData["Title"] = "Editar Niño";
+    }
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@if (Model.oNino.PkNuip == 0)
+{
+    <h1>Crear Niño</h1>
+}
+else
+{
+    <h1>Editar Niño</h1>
+}
+
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Nino_Detalle" asp-controller="Ninos" method="post">
+            @if (Model.oNino.PkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oNino.PkNuip">NUIP</label>
+                    <input class="form-control form-control-sm" asp-for="oNino.PkNuip" type="text" />
+                    <span class="text-danger" asp-validation-for="oNino.PkNuip"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oNino.PkNuip">NUIP</label>
+                    <input class="form-control form-control-sm" asp-for="oNino.PkNuip" type="text" readonly />
+                    <span class="text-danger" asp-validation-for="oNino.PkNuip"></span>
+                </div>
+            }
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Nombre">Nombre</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Nombre" type="text" />
+                <span class="text-danger" asp-validation-for="oNino.Nombre"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Apellido">Apellido</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Apellido" type="text" />
+                <span class="text-danger" asp-validation-for="oNino.Apellido"></span>
+            </div>
+            @if (Model.oNino.PkNuip == 0)
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oNino.FechaNacimiento">Fecha de Nacimiento</label>
+                    <input class="form-control form-control-sm" asp-for="oNino.FechaNacimiento" type="date" value="@DateTime.Today.ToString("yyyy-MM-dd")" />
+                    <span class="text-danger" asp-validation-for="oNino.FechaNacimiento"></span>
+                </div>
+            }
+            else
+            {
+                <div class="mb-2">
+                    <label class="form-label" asp-for="oNino.FechaNacimiento">Fecha de Nacimiento</label>
+                    <input class="form-control form-control-sm" asp-for="oNino.FechaNacimiento" type="date" />
+                    <span class="text-danger" asp-validation-for="oNino.FechaNacimiento"></span>
+                </div>
+            }
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.TipoSangre">Tipo de Sangre </label>
+                <select class="form-select form-select-sm" asp-for="oNino.TipoSangre">
+                    <option selected disabled>--Seleccionar--</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oNino.TipoSangre"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Departamento">Departamento</label>
+                <select class="form-select form-select-sm" asp-for="oNino.Departamento" id="departamentoSelect">
+                    <option selected disabled>--Seleccionar--</option>
+                    @foreach (var departamento in Model.DepartamentosConCapitales.Keys)
+                    {
+                        <option value="@departamento">@departamento</option>
+                    }
+                </select>
+                <span class="text-danger" asp-validation-for="oNino.Departamento"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Ciudad">Ciudad</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Ciudad" id="ciudadInput" readonly />
+                <span class="text-danger" asp-validation-for="oNino.Ciudad"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.FkIdUsuario">Id Acudiente</label>
+                <select class="form-select form-select-sm" asp-for="oNino.FkIdUsuario" asp-items="@Model.oListaUsuario">
+                    <option selected disabled>--Seleccionar--</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oNino.FkIdUsuario"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Telefono">Telefono</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Telefono" type="text" />
+                <span class="text-danger" asp-validation-for="oNino.Telefono"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Direccion">Direccion</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Direccion" type="text" />
+                <span class="text-danger" asp-validation-for="oNino.Direccion"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.Eps">EPS</label>
+                <input class="form-control form-control-sm" asp-for="oNino.Eps" type="text" />
+                <span class="text-danger" asp-validation-for="oNino.Eps"></span>
+            </div>
+            <div class="mb-2">
+                <label class="form-label" asp-for="oNino.FkIdJardin">Jardin</label>
+                <select class="form-select form-select-sm" asp-for="oNino.FkIdJardin" asp-items="@Model.oListaJardin">
+                    <option selected disabled>--Seleccionar--</option>
+                </select>
+                <span class="text-danger" asp-validation-for="oNino.FkIdJardin"></span>
+            </div>
+            <div class="mb-2">
+                @if (Model.oNino.PkNuip == 0)
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Crear</button>
+                }
+                else
+                {
+                    <button class="btn btn-primary btn-sm w-25" type="submit">Actualizar</button>
+                }
+                <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="Ninos">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    var capitales = {
+        "Amazonas": "Leticia",
+        "Antioquia": "Medellín",
+        "Arauca": "Arauca",
+        "Atlántico": "Barranquilla",
+        "Bolívar": "Cartagena",
+        "Boyacá": "Tunja",
+        "Caldas": "Manizales",
+        "Caquetá": "Florencia",
+        "Casanare": "Yopal",
+        "Cauca": "Popayán",
+        "Cesar": "Valledupar",
+        "Chocó": "Quibdó",
+        "Córdoba": "Montería",
+        "Cundinamarca": "Bogotá",
+        "Guainía": "Inírida",
+        "Guaviare": "San José del Guaviare",
+        "Huila": "Neiva",
+        "La Guajira": "Riohacha",
+        "Magdalena": "Santa Marta",
+        "Meta": "Villavicencio",
+        "Nariño": "Pasto",
+        "Norte de Santander": "Cúcuta",
+        "Putumayo": "Mocoa",
+        "Quindío": "Armenia",
+        "Risaralda": "Pereira",
+        "San Andres y Providencia": "San Andrés",
+        "Santander": "Bucaramanga",
+        "Sucre": "Sincelejo",
+        "Tolima": "Ibagué",
+        "Valle del Cauca": "Cali",
+        "Vaupés": "Mitú",
+        "Vichada": "Puerto Carreño"
+    };
+
+    document.getElementById("departamentoSelect").addEventListener("change", function () {
+        var departamento = this.value;
+        document.getElementById("ciudadInput").value = capitales[departamento];
+    });
+</script>

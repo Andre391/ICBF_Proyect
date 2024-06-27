@@ -1,0 +1,25 @@
+﻿@model ICBF_Project.Models.Role
+@{
+    ViewData["Title"] = "Eliminar Rol";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3 class="text-danger">¿Está seguro de eliminar este Rol?</h3>
+<hr />
+<div class="row">
+    <div class="col-sm-4">
+        <form asp-action="Eliminar" asp-controller="Roles" method="post">
+            <input type="hidden" asp-for="PkIdRol" />
+
+            <div class="mb-2">
+                <label class="form-label" asp-for="NombreRol">Nombre Rol</label>
+                <input class="form-control form-control-sm" asp-for="NombreRol" type="text" readonly />
+            </div>
+
+            <div class="mb-2">
+                <button class="btn btn-danger btn-sm w-25" type="submit">Eliminar</button>
+                <a class="btn btn-outline-dark btn-sm" asp-action="Index" asp-controller="Roles">Volver</a>
+            </div>
+        </form>
+    </div>
+</div>

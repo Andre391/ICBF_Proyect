@@ -1,0 +1,36 @@
+﻿@model ICBF_Project.Models.Jardine
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Jardine</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            Nombre
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Nombre
+        </dd>
+        <dt class="col-sm-2">
+            Direccion
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Direccion
+        </dd>
+        <dt class="col-sm-2">
+            Estado
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Estado
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.PkIdJardin">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
